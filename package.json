@@ -1,0 +1,21 @@
+{
+  "name": "teluguchandassu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "grapheme-splitter": "^1.0.4",
+    "languagedetect": "^2.0.0",
+    "sanscript": "^0.0.2"
+  }
+}

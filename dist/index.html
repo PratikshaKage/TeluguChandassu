@@ -1,0 +1,62 @@
+<!DOCTYPE <html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Telugu Chandassu</title> 
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+
+</head>
+
+<body>
+    <section>
+        <div class="wave" id="wave1" style="--i:1;"></div>
+        <div class="wave" id="wave2" style="--i:2;"></div> 
+        <div class="wave" id="wave3" style="--i:3;"></div>
+        <div class="wave" id="wave4" style="--i:4;"></div>
+    </section>
+    <div class="sec">
+        <h1>Telugu Chandassu</h1>
+        <p>Telugu Chandassu, also known as Telugu prosody or Telugu chandas, 
+            is a system of rules that governs the structure and rhythm of poetry in the Telugu language. 
+            It is an ancient and complex system that has been used for centuries to create classical Telugu poetry.<br><br>
+            Telugu Chandassu is based on the principles of syllabic length, stress, and rhyme.
+             The length of a syllable is classified into two types - laghu (short) and guru (long). 
+             The stress of a syllable is determined by its position within a word or line of poetry. 
+             The rhyme, or chanda, is determined by the pattern of syllabic length and stress within a line of poetry.</p>
+    </div>
+    <div class="box">
+        <form id="form">
+            <label for="input">Input</label><br>
+            <input type="text" id="input" name="input"><br>
+    
+            <input type="button" id="submitBtn" value="Submit">
+        </form>
+    
+        <p id="segmented"></p>
+        <p id="order"></p>
+        <p id="result"></p>
+    </div>
+    <script>
+
+        let wavel= document.getElementById('wave1');
+        let wave2 = document.getElementById('wave2');
+        let wave3 =document.getElementById('wave3');
+        let wave4 =document.getElementById('wave4');
+        window.addEventListener('scroll', function(){ 
+            let value = window.scrollY;
+
+        wave1.style.backgroundPositionX = 400 + value * 4 + 'px';
+        wave2.style.backgroundPositionX = 300 + value *-4 + 'px'; 
+        wave3.style.backgroundPositionX = 200 + value * 2 + 'px';
+        wave4.style.backgroundPositionX = 100 + value *-2 + 'px';
+
+
+})
+</script>
+
+</body>
+
+</html>
