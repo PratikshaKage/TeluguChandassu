@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 200, 300,408,508,608,708,808,900&display=swap');
+*
+{
+margin: 0;
+
+padding: 0;
+
+box-sizing: border-box;
+
+font-family: "Poppins", sans-serif;}
+
+section{
+
+position: relative;
+
+width: 100%;
+
+height: 100vh;
+
+background: #3586ff;}
+
+.wave{
+
+bottom: 0;
+
+position: absolute; width: 100%; height: 100px;
+
+Left: 0;
+
+background: url(wave.png);
+
+background-size: 1000px 100px;
+animation : animate 4s ease-in-out infinite;
+animation-delay: calc(var(--i)*0.25s);
+}
+.wave#wave1{
+
+z-index: 1000;
+
+opacity: 1;
+
+background-position-x: 400px;
+
+}
+
+.wave#wave2{
+
+z-index: 999;
+
+opacity: 0.5; background-position-x: 300px;}
+.wave#wave3{
+
+    z-index: 998;
+    
+    opacity: 0.2; background-position-x: 200px;}
+.wave#wave4{
+
+        z-index: 999;
+        
+
+        opacity: 0.7; background-position-x: 100px;}
+@keyframes animate{
+    0%,100%
+    {
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+}
+
+.sec{
+    padding: 100px;
+}
+.sec h2{
+
+font-size: 3em;
+align-content: center;
+
+color: #111;}
+.sec p{
+    font-size: 1.2em;
+
+color: #111;
+
+}
+.box{
+    position: relative;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 50px;
+}
+
+.input {
+    padding: 10px;
+    width: 180px;
+    height: 80px;
+    background: none;
+    border: 4px solid #3586ff;
+    border-radius: 200px;
+    box-sizing: border-box;
+    
+    font-size: 26px;
+    color: #000000;
+    outline: none;
+    transition: .5s;
+}
+.box:hover input{
+    width: 450px;
+    background: #ffffff98;
+    border-radius: 50px;
+}
+ ::placeholder{
+    color: rgb(255, 255, 255);
+    align-content: center;
+}
+.box i{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(-50%,-50%);
+    font-size: 26px;
+    color: #3586ff;
+    transition: .2s;
+}
+.box:hover i{
+    opacity: 0;
+    z-index: -1;
+}
