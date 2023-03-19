@@ -10,9 +10,37 @@ const submitBtn = document.getElementById('submitBtn');
 const segmented = document.getElementById('segmented');
 const order = document.getElementById('order');
 const result = document.getElementById('result');
+const result1 = document.getElementById('result1');
 
 const U=["ా","ీ","ూ","ౄ","ౣ","ే","ై","ో","ౌ","ః"];
 const L=["ఆ","ఈ","ఊ","ౠ","ౡ","ఏ","ఐ","ఓ","ఔ","అః"];
+const M={"UII":"Bha gaṇamu",
+"IUI":"Ja gaṇamu",
+"IIU":"Sa gaṇamu",
+"III":"Na gaṇamu",
+"IUU":"Ya gaṇamu",
+"UIU":"Ra gaṇamu",
+"UUI":"Ta gaṇamu",
+"UUU":"Ma gaṇamu",
+"UI":"Gala gaṇamu",
+"IIIU":"Naga gaṇamu",
+"IIUI":"Sala gaṇamu",
+"IIII":"Nala gaṇamu",
+"UIII":"Bhala gaṇamu",
+"UIIU":"Bhagaru gaṇamu",
+"UUII":"Tala gaṇamu",
+"UUIU":"Taga gaṇamu",
+"UUUI":"Malagha gaṇamu",
+"IIIII":"Nalala gaṇamu",
+"IIIUU":"Nagaga gaṇamu",
+"IIIIU":"Nava gaṇamu",
+"IIUUI":"Saha gaṇamu",
+"IIUIU":"Sava gaṇamu",
+"IIUUU":"Sagaga gaṇamu",
+"IIIUI":"Naha gaṇamu",
+"UIUU":"Raguru gaṇamu",
+"IIII":"Nala gaṇamu"};
+
 const N={"UII":"భ గణము",
 "IUI":"జ గణము",
 "IIU":"స గణము",
@@ -54,6 +82,7 @@ submitBtn.addEventListener('click', async () => {
     order.textContent = '';
   
     result.textContent = '';
+    result1.textContent = '';
   
       const input = document.getElementById('input').value;
       if (input.length === 0) {
@@ -114,7 +143,8 @@ submitBtn.addEventListener('click', async () => {
   
       order.textContent = `${input} has ${textOrder} ganams`;
   
-      result.textContent = `The final result: ${input}  అనే పదం   ${N[textOrder]}  కు చెందినది`;
+      result.textContent = `${input}  అనే పదం   ${N[textOrder]}  కు చెందినది`;
+      result1.textContent = `${input}  belongs to    ${M[textOrder]}`;
   });
 
 
